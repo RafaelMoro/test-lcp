@@ -8,7 +8,7 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <div id="main" class="bg-black min-h-screen bg-image">
+  <div id="main" class="bg-black min-h-screen">
     <main class="max-w-7xl mx-auto">
       <Header />
       <Hero />
@@ -18,7 +18,7 @@ import Layout from "../layouts/Layout.astro";
 
 <style>
   .bg-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
       image-set(url("/assets/ny-wallpaper-mobile.webp") type("image/webp"));
   }
   @media (min-width: 640px) {
@@ -38,9 +38,9 @@ import Layout from "../layouts/Layout.astro";
 <script>
   const main = document.getElementById("main");
 
-  // setTimeout(() => {
-  //   if (main) {
-  //     main.classList.add("animated", "fadeIn");
-  //   }
-  // });
+  setTimeout(() => {
+    if (main) {
+      main.classList.add("fadeInImage", "animated");
+    }
+  }, 500);
 </script>

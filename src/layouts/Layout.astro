@@ -20,8 +20,8 @@
     height: 100%;
   }
   .animated {
-    -webkit-animation-duration: 0.5s;
-    animation-duration: 0.5s;
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
   }
@@ -53,5 +53,98 @@
   .fadeIn {
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
+  }
+  @keyframes fadeInImage {
+    0% {
+      background-color: black;
+      background-image: none;
+    }
+    25% {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+        image-set(url("/assets/ny-wallpaper-mobile.webp") type("image/webp"));
+
+      @media (min-width: 640px) {
+        background-color: unset;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.9)
+          ),
+          image-set(url("/assets/ny-wallpaper-tablet.webp") type("image/webp"));
+      }
+
+      @media (min-width: 1024px) {
+        background-color: unset;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.9)
+          ),
+          image-set(url("/assets/ny-wallpaper-desktop.webp") type("image/webp"));
+      }
+    }
+    50% {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
+        image-set(url("/assets/ny-wallpaper-mobile.webp") type("image/webp"));
+
+      @media (min-width: 640px) {
+        background-color: unset;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.8)
+          ),
+          image-set(url("/assets/ny-wallpaper-tablet.webp") type("image/webp"));
+      }
+
+      @media (min-width: 1024px) {
+        background-color: unset;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.8),
+            rgba(0, 0, 0, 0.8)
+          ),
+          image-set(url("/assets/ny-wallpaper-desktop.webp") type("image/webp"));
+      }
+    }
+    75% {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        image-set(url("/assets/ny-wallpaper-mobile.webp") type("image/webp"));
+
+      @media (min-width: 640px) {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+          ),
+          image-set(url("/assets/ny-wallpaper-tablet.webp") type("image/webp"));
+      }
+
+      @media (min-width: 1024px) {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+          ),
+          image-set(url("/assets/ny-wallpaper-desktop.webp") type("image/webp"));
+      }
+    }
+    100% {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        image-set(url("/assets/ny-wallpaper-mobile.webp") type("image/webp"));
+
+      @media (min-width: 640px) {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          image-set(url("/assets/ny-wallpaper-tablet.webp") type("image/webp"));
+      }
+
+      @media (min-width: 1024px) {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)
+          ),
+          image-set(url("/assets/ny-wallpaper-desktop.webp") type("image/webp"));
+      }
+    }
+  }
+  .fadeInImage {
+    animation-name: fadeInImage;
   }
 </style>
